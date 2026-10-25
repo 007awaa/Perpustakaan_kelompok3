@@ -10,3 +10,9 @@ def input_wajib(pesan):
             print("  [!] Isian tidak boleh kosong. (ketik 'batal' untuk kembali)")
             continue
         return isi
+def cari_by_kode(koleksi_buku, kode):
+    """Cari satu buku berdasarkan kode (tidak case sensitive). Return dict atau None."""
+    for buku in koleksi_buku:
+        if buku["kode_buku"].lower() == kode.lower():
+            return buku
+    return None
