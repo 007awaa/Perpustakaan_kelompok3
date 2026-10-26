@@ -30,3 +30,18 @@ def potong_teks(teks, lebar):
     if len(teks) <= lebar:
         return teks
     return teks[:lebar - 3] + "..."
+
+def cetak_tabel(daftar_buku):
+    """Cetak daftar buku dalam bentuk tabel dengan penanda status [TERSEDIA]/[DIPINJAM]."""
+    garis = "-" * 108
+    print(garis)
+    print(f"{'No':<4}{'Kode':<10}{'Judul':<30}{'Pengarang':<20}{'Genre':<16}{'Tahun':<7}{'Status':<12}")
+    print(garis)
+    for nomor, b in enumerate(daftar_buku, start=1):
+        penanda = "[" + b["status"].upper() + "]"
+        print(f"{nomor:<4}{potong_teks(b['kode_buku'], 9):<10}"
+              f"{potong_teks(b['judul'], 29):<30}"
+              f"{potong_teks(b['pengarang'], 19):<20}"
+              f"{potong_teks(b['genre'], 15):<16}"
+              f"{b['tahun_terbit']:<7}{penanda:<12}")
+    print(garis)
