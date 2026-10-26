@@ -1,4 +1,5 @@
 from buku import input_wajib, cari_by_kode, konfirmasi
+import buku
 
 
 def update_status_buku(koleksi_buku):
@@ -21,3 +22,17 @@ def update_status_buku(koleksi_buku):
     print(f"Status saat ini: {buku['status']}")
 
 
+    status_lama = buku["status"]
+    if status_lama == "Tersedia":
+        status_baru = "Dipinjam"
+        kata_kerja = "dipinjam"
+    else:
+        status_baru = "Tersedia"
+        kata_kerja = "dikembalikan"
+
+    if konfirmasi(f"\nUbah status menjadi '{status_baru}'? (y/n): "):
+        buku["status"] = status_baru
+        print(f"Buku '{buku['judul']}' berhasil {kata_kerja}. "
+              f"Status diubah: {status_lama} menjadi {status_baru}.")
+    else:
+        print("Perubahan status dibatalkan.")
