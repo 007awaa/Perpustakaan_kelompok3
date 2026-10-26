@@ -52,3 +52,20 @@ def hapus_buku(koleksi_buku):
     if buku is None:
         print(f"\nBuku dengan kode '{kode}' tidak ditemukan dalam koleksi.")
         return
+
+
+    if buku["status"] == "Dipinjam":
+            print(f"\nBuku '{buku['judul']}' tidak dapat dihapus karena sedang dalam status Dipinjam.")
+            print("Pastikan buku dikembalikan terlebih dahulu sebelum dihapus dari koleksi.")
+            return
+    
+    print(f"\nJudul     : {buku['judul']}")
+    print(f"Pengarang : {buku['pengarang']}")
+    print(f"Genre     : {buku['genre']}")
+    print(f"Status    : {buku['status']}")
+    
+    if konfirmasi("\nYakin ingin menghapus buku ini? (y/n): "):
+        koleksi_buku.remove(buku)
+        print(f"Buku '{buku['judul']}' dengan kode {buku['kode_buku']} berhasil dihapus dari koleksi.")
+    else:
+        print("Penghapusan dibatalkan.")
