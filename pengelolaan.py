@@ -36,3 +36,19 @@ def update_status_buku(koleksi_buku):
               f"Status diubah: {status_lama} menjadi {status_baru}.")
     else:
         print("Perubahan status dibatalkan.")
+
+
+def hapus_buku(koleksi_buku):
+    print("\n--- HAPUS BUKU ---")
+    if len(koleksi_buku) == 0:
+        print("Belum ada buku dalam koleksi.")
+        return
+
+    kode = input_wajib("Masukkan kode buku yang akan dihapus: ")
+    if kode is None:
+        return
+
+    buku = cari_by_kode(koleksi_buku, kode)
+    if buku is None:
+        print(f"\nBuku dengan kode '{kode}' tidak ditemukan dalam koleksi.")
+        return
