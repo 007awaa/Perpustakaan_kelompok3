@@ -16,3 +16,8 @@ def tampilkan_menu():
     print("6. Hapus Buku")
     print("0. Keluar")
     print("-" * 40)
+
+def menu_utama():
+    while True:
+        tampilkan_menu()
+        pilihan = input("Pilih menu [0-6]: ").strip()
