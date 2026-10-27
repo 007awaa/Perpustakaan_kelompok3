@@ -49,7 +49,8 @@ def cari_buku(koleksi_buku):
     genre = input_wajib("Masukkan genre: ")
     if genre is None:
         return 
+    
 
-
+    hasil = [b for b in koleksi_buku if genre.lower() in b["genre"].lower()]
          
                 
