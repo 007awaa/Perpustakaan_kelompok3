@@ -39,3 +39,6 @@ def menu_utama():
             break
         else:
             print("\n[!] Pilihan tidak valid. Masukkan angka 0 sampai 6.")
+
+
+            
