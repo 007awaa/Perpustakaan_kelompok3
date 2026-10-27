@@ -3,3 +3,16 @@ from pencarian import cari_buku, filter_buku_by_genre
 from pengelolaan import update_status_buku, hapus_buku
 
 koleksi_buku = []
+
+def tampilkan_menu():
+    print("\n" + "=" * 40)
+    print("        SISTEM PERPUSTAKAAN MINI")
+    print("=" * 40)
+    print("1. Tambah Buku Baru")
+    print("2. Tampilkan Semua Buku")
+    print("3. Cari Buku")
+    print("4. Update Status Buku")
+    print("5. Filter Buku Berdasarkan Genre")
+    print("6. Hapus Buku")
+    print("0. Keluar")
+    print("-" * 40)
