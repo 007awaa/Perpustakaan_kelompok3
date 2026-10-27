@@ -32,8 +32,19 @@ def cari_buku(koleksi_buku):
             else:
                 print(f"\nDitemukan {len(hasil)} buku:")
                 cetak_tabel(hasil)
-    `
-            
+    
+          
+    else:
+        print("  [!] Pilihan tidak valid. Pilih 1 atau 2.")
+
+
+
+
+    def filter_buku_by_genre(koleksi_buku):
+        print("\n--- FILTER BUKU BERDASARKAN GENRE ---")
+    if len(koleksi_buku) == 0:
+        print("Belum ada buku dalam koleksi.")
+        return
 
          
                 
