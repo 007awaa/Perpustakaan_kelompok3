@@ -32,6 +32,7 @@ def cari_buku(koleksi_buku):
             else:
                 print(f"\nDitemukan {len(hasil)} buku:")
                 cetak_tabel(hasil)
+    `
             
 
          
