@@ -52,5 +52,7 @@ def cari_buku(koleksi_buku):
     
 
     hasil = [b for b in koleksi_buku if genre.lower() in b["genre"].lower()]
+    if len(hasil) == 0:
+        print(f"\nTidak ada buku dengan genre '{genre}' dalam koleksi.")
          
                 
