@@ -45,7 +45,11 @@ def cari_buku(koleksi_buku):
     if len(koleksi_buku) == 0:
         print("Belum ada buku dalam koleksi.")
         return
-    
+
+    genre = input_wajib("Masukkan genre: ")
+    if genre is None:
+        return 
+
 
          
                 
