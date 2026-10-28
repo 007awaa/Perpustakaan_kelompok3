@@ -100,3 +100,9 @@ def tambah_buku(koleksi_buku):
     }
     koleksi_buku.append(buku_baru)
     print(f"\nBuku '{judul}' dengan kode {kode} berhasil ditambahkan ke koleksi.")
+
+def tampilkan_semua_buku(koleksi_buku):
+    print("\n--- DAFTAR SEMUA BUKU ---")
+    if len(koleksi_buku) == 0:
+        print("Belum ada buku dalam koleksi.")
+        return
