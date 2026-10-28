@@ -89,3 +89,12 @@ def tambah_buku(koleksi_buku):
             print(f"  [!] Tahun terbit tidak boleh lebih besar dari tahun sekarang ({tahun_sekarang}).")
             continue
         break
+
+    buku_baru = {
+            "kode_buku": kode,
+            "judul": judul,
+            "pengarang": pengarang,
+            "genre": genre,
+            "tahun_terbit": tahun,
+            "status": "Tersedia",  
+        }
