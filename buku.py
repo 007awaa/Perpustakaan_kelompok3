@@ -74,3 +74,10 @@ def tambah_buku(koleksi_buku):
     if genre is None:
             print("Penambahan buku dibatalkan.")
             return
+
+    tahun_sekarang = datetime.now().year
+    while True:
+        tahun_str = input_wajib("Tahun terbit : ")
+        if tahun_str is None:
+            print("Penambahan buku dibatalkan.")
+            return
