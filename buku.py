@@ -106,3 +106,14 @@ def tampilkan_semua_buku(koleksi_buku):
     if len(koleksi_buku) == 0:
         print("Belum ada buku dalam koleksi.")
         return
+
+    cetak_tabel(koleksi_buku)
+    
+    jumlah_tersedia = 0
+    jumlah_dipinjam = 0
+    for b in koleksi_buku:
+        if b["status"] == "Tersedia":
+            jumlah_tersedia += 1
+        else:
+            jumlah_dipinjam += 1
+    print(f"Total buku: {len(koleksi_buku)} | Tersedia: {jumlah_tersedia} | Dipinjam: {jumlah_dipinjam}")
