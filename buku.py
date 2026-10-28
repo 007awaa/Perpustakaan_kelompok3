@@ -91,10 +91,12 @@ def tambah_buku(koleksi_buku):
         break
 
     buku_baru = {
-            "kode_buku": kode,
-            "judul": judul,
-            "pengarang": pengarang,
-            "genre": genre,
-            "tahun_terbit": tahun,
-            "status": "Tersedia",  
-        }
+        "kode_buku": kode,
+        "judul": judul,
+        "pengarang": pengarang,
+        "genre": genre,
+        "tahun_terbit": tahun,
+        "status": "Tersedia",  
+    }
+    koleksi_buku.append(buku_baru)
+    print(f"\nBuku '{judul}' dengan kode {kode} berhasil ditambahkan ke koleksi.")
