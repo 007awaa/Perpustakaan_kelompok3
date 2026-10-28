@@ -41,4 +41,5 @@ def menu_utama():
             print("\n[!] Pilihan tidak valid. Masukkan angka 0 sampai 6.")
 
 
-            
+if __name__ == "__main__":
+    menu_utama()
