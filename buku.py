@@ -81,3 +81,11 @@ def tambah_buku(koleksi_buku):
         if tahun_str is None:
             print("Penambahan buku dibatalkan.")
             return
+        if not tahun_str.isdigit() or int(tahun_str) <= 0:
+                    print("  [!] Tahun terbit harus berupa angka bulat positif.")
+                    continue
+        tahun = int(tahun_str)
+        if tahun > tahun_sekarang:
+            print(f"  [!] Tahun terbit tidak boleh lebih besar dari tahun sekarang ({tahun_sekarang}).")
+            continue
+        break
