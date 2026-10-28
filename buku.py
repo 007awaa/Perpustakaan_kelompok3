@@ -59,3 +59,9 @@ def tambah_buku(koleksi_buku):
             print(f"  [!] Kode buku '{kode}' sudah digunakan. Gunakan kode yang berbeda.")
             continue
         break
+
+    judul = input_wajib("Judul        : ")
+    if judul is None:
+            print("Penambahan buku dibatalkan.")
+            return
+    
