@@ -45,3 +45,17 @@ def cetak_tabel(daftar_buku):
               f"{potong_teks(b['genre'], 15):<16}"
               f"{b['tahun_terbit']:<7}{penanda:<12}")
     print(garis)
+
+def tambah_buku(koleksi_buku):
+    print("\n--- TAMBAH BUKU BARU ---")
+    print("(ketik 'batal' kapan saja untuk kembali ke menu)")
+
+    while True:
+        kode = input_wajib("Kode buku    : ")
+        if kode is None:
+            print("Penambahan buku dibatalkan.")
+            return
+        if cari_by_kode(koleksi_buku, kode) is not None:
+            print(f"  [!] Kode buku '{kode}' sudah digunakan. Gunakan kode yang berbeda.")
+            continue
+        break
