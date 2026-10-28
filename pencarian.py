@@ -56,5 +56,6 @@ def cari_buku(koleksi_buku):
         print(f"\nTidak ada buku dengan genre '{genre}' dalam koleksi.")
     else:
         print(f"\nMenampilkan buku genre: {genre} ({len(hasil)} buku ditemukan).")
+        cetak_tabel(hasil)
          
                 
