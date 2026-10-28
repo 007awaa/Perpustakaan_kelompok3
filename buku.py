@@ -64,4 +64,8 @@ def tambah_buku(koleksi_buku):
     if judul is None:
             print("Penambahan buku dibatalkan.")
             return
-    
+
+    pengarang = input_wajib("Pengarang    : ")
+    if pengarang is None:
+            print("Penambahan buku dibatalkan.")
+            return
